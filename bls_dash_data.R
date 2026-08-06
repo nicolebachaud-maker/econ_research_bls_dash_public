@@ -320,8 +320,6 @@ clean_bls_df <- raw_combined_df %>%
     category,
     date,
     value,
-    year,
-    period_name = periodName,
     last_updated
   )
 
