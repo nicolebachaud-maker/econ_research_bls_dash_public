@@ -330,3 +330,6 @@ clean_bls_df <- raw_combined_df %>%
 write.csv(clean_bls_df, file.path(dirRun, "bls_tableau_master.csv"), row.names = FALSE, na = "")
 
 message("Success! Saved ", nrow(clean_bls_df), " rows to CSV across ", length(unique(clean_bls_df$series_id)), " series.")
+
+# Save JSON for direct Tableau Public Web Connector
+jsonlite::write_json(clean_bls_df, file.path(dirRun, "bls_tableau_master.json"), dataframe = "rows", pretty = TRUE)
