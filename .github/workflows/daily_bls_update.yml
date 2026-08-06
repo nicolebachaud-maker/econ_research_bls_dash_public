@@ -1,9 +1,10 @@
 name: Scheduled BLS Data Update
 
 on:
+  workflow_dispatch:
   schedule:
-  - cron: '05 14 * * *'   # 7:05 AM PDT (converted to UTC)
-- cron: '35 12 * * 5'   # 5:35 AM PDT (converted to UTC)
+    - cron: '05 14 * * *'
+    - cron: '35 12 * * 5'
 workflow_dispatch:
   
   jobs:
